@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="JAVA面向对象总结面向对象的三大基本特征：继承性，封装性，多态性（一） 封装函数是最小的封装体。类也是一个封装体。private:私有的，权限修饰符，用来修饰类中的成员（成员变量 、成员函数），其只在本类中有效。每个成员变量通常都会对应两个访问方式：一个设置，一个获取。注意：私有仅是封装的一种表现形式。因为语句都必须在函数内，所以，私有化后，再提供访问方式，就可以在访问方式的函数内实现变量控制。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-13T11:17:47.961Z">
+<meta property="og:updated_time" content="2019-10-13T11:25:08.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java面向对象总结">
 <meta name="twitter:description" content="JAVA面向对象总结面向对象的三大基本特征：继承性，封装性，多态性（一） 封装函数是最小的封装体。类也是一个封装体。private:私有的，权限修饰符，用来修饰类中的成员（成员变量 、成员函数），其只在本类中有效。每个成员变量通常都会对应两个访问方式：一个设置，一个获取。注意：私有仅是封装的一种表现形式。因为语句都必须在函数内，所以，私有化后，再提供访问方式，就可以在访问方式的函数内实现变量控制。">
@@ -175,19 +175,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>JAVA面向对象总结<br>面向对象的三大基本特征：继承性，封装性，多态性<br>（一） 封装<br>函数是最小的封装体。类也是一个封装体。<br>private:私有的，权限修饰符，用来修饰类中的成员（成员变量 、成员函数），其只在本类中有效。<br>每个成员变量通常都会对应两个访问方式：一个设置，一个获取。<br>注意：私有仅是封装的一种表现形式。<br>因为语句都必须在函数内，所以，私有化后，再提供访问方式，就可以在访问方式的函数内实现变量控制。这样就提高代码的健壮性。<br>一般进行封装，要对类中的大部分属性都隐藏，最低权限是private。<br>类里有一个setXxx函数（一般返回值是void，保存数据，要带参数）和getXxx函数（有返回值类型，但一般没参数,getXxx之后一般用一个变量来接收:stringx=p.getXxx），那代表一定有一个私有化属性。<br>成员变量都有初始化值， 局部变量可以没有。<br>举例：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>class  demo<br>{<br>       private Stringname；<br>       public void setName(Stringname)//这个函数方便以后赋值<br>       {<br>              this.name=name;<br>       }<br>       public String getName()//这个函数是方便以后有需要调用的，比如以后要打印name的值<br>       {<br>              return name;<br>       }<br>构造函数：<br>函数名与类名一致，不用返回值类型，不可以用return，主要用来初始化对象。<br>对象一建立，就默认调用其构造函数。一个对象一建立，就有其默认的属性和行为。（如一个人刚出生就会呼吸，哭…）。<br>如果我们没有指认，那么类建立就会默认建一个构造函数（类名（）{}），不然对象无法初始化，也就无法建立。（注意：只要我们有重写，那么就不会使用默认的建构造函数）<br>其与普通函数的区别除了写法上之外：<br>1，构造函数只在对象建立时运行一次，不再运行了，而普通函数可以调用多次，另外，构造函数是用来初始化对象的，而一般方法是用来添加对象具备的功能。<br>何时我们要手动添加构造函数：当我们分析事物时，该事物存在一些特性或行为，那么我们就给其定义一个构造函数，如果有变量参与运算，那么我们就给构造函数定义一个参数。</p>
+<p>class  demo<br>{<br>       private Stringname；<br>       public void setName(Stringname)//这个函数方便以后赋值<br>       {<br>              this.name=name;<br>       }<br>       public String getName()//这个函数是方便以后有需要调用的，比如以后要打印name的值<br>       {<br>              return name;<br>       }<br>构造函数：<br>函数名与类名一致，不用返回值类型，不可以用return，主要用来初始化对象。<br>对象一建立，就默认调用其构造函数。一个对象一建立，就有其默认的属性和行为。（如一个人刚出生就会呼吸，哭…）。<br>如果我们没有指认，那么类建立就会默认建一个构造函数（类名（）{}），不然对象无法初始化，也就无法建立。（注意：只要我们有重写，那么就不会使用默认的建构造函数）<br>其与普通函数的区别除了写法上之外：<br>1，构造函数只在对象建立时运行一次，不再运行了，而普通函数可以调用多次，另外，构造函数是用来初始化对象的，而一般方法是用来添加对象具备的功能。<br>何时我们要手动添加构造函数：当我们分析事物时，该事物存在一些特性或行为，那么我们就给其定义一个构造函数，如果有变量参与运算，那么我们就给构造函数定义一个参数。</p>
 <p>构造函数写法举例：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>class Person<br>{<br>       Person(String name,int age)<br>//注意：在新建一个对象时要加上参数进行区分，因为一个类可以放很多个构造方法。<br>//比如调用方式：Person p =new Person（”fada”,20）//构造函数已经被重写了，默//认的构造方法已经不存在了，再调用<br> Person p=new Person（）；会报错<br>       {<br>              this.name = name;<br>              this.age = age;<br>       }<br>初始化代码块：（不怎么用）<br>1，所有对象在建立时都先执行构造代码块初始化，再执行构造函数初始化。</p>
+<p>class Person<br>{<br>       Person(String name,int age)<br>//注意：在新建一个对象时要加上参数进行区分，因为一个类可以放很多个构造方法。<br>//比如调用方式：Person p =new Person（”fada”,20）//构造函数已经被重写了，默//认的构造方法已经不存在了，再调用<br> Person p=new Person（）；会报错<br>       {<br>              this.name = name;<br>              this.age = age;<br>       }<br>初始化代码块：（不怎么用）<br>1，所有对象在建立时都先执行构造代码块初始化，再执行构造函数初始化。</p>
 <p>2，作用：当所有对象有共性时，那么就可以定义一个构造代码块（例如：所有小孩先出来就是哭，然后才有其它的属性）</p>
 <p>构造代码块的写法(就是在类里面用一个大括号)举例：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>class Person<br>{<br>{<br>System.out.print(“fada”)<br>//这样一写，那么以后每次建立一个构造函数时便先初始化这个构造代码块<br>}<br>}<br>this关键字的用法<br>This在类中就是三个代表：代表对象的成员变量，在函数中代表对象调用函数，代表类中的构造函数。</p>
+<p>class Person<br>{<br>{<br>System.out.print(“fada”)<br>//这样一写，那么以后每次建立一个构造函数时便先初始化这个构造代码块<br>}<br>}<br>this关键字的用法<br>This在类中就是三个代表：代表对象的成员变量，在函数中代表对象调用函数，代表类中的构造函数。</p>
 <p>格式：this.变量=变量；<br>this是用来区分局部变量和成员变量同名时的关键字，因为如果在构造函数里比如（name=name），那么其是赋值给他本身，而不是赋值给类里面的name。<br>何是用this？当定义类中的函数时，需要调用该函数的对象时，这个时候就用this来表示这个对象。<br>但凡本类功能内部使用到了本类对象，用this表示。<br>看到this就是有代表对象，代表哪个对象就看其所在功能被哪个对象调用。<br>这样就知道谁在参与运算。</p>
 <p>例：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>class Person<br>{<br>       private String name;<br>       Person(String name)<br>       {<br>              this.name= name;//this.name=p1.name；<br>}<br>}<br>class PersonDemo3<br>{<br>       public static void main(String[] args)<br>       {</p>
+<p>class Person<br>{<br>       private String name;<br>       Person(String name)<br>       {<br>              this.name= name;//this.name=p1.name；<br>}<br>}<br>class PersonDemo3<br>{<br>       public static void main(String[] args)<br>       {</p>
 <pre><code>Person p1 =new Person(&quot;fada&quot;);</code></pre><p>}<br>}<br>this的应用之定义类中函数的调用：当定义类中功能时，该函数内部要用到调用该函数的对象时，这时用this来表示这个对象。</p>
 <p>​ 但凡本类功能内部使用了了本类对象，都用this表示。</p>
 <p>例：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>class Person<br>{<br>private String name;<br>       Person(String name)<br>       {<br>              this.name= name;//this.name=p1.name；<br>this.fada();//其实就==p1.fada();<br>//这里写这p1是因为p1这个对象在调用这个函数。一句话，谁调用它就在代表谁。<br>}<br>private int age;<br>Person(int age)<br>{<br>       this.age =age;<br>}<br>public void fada()<br>       {<br>              System.out.println(“fada”);<br>}<br>/*<br>       需求：给人定义一个用于比较年龄是否相同的功能。也就是是否是同龄人。<br>       */<br>       public boolean compare(Person p)<br>       {<br>              return this.age==p.age;</p>
+<p>class Person<br>{<br>private String name;<br>       Person(String name)<br>       {<br>              this.name= name;//this.name=p1.name；<br>this.fada();//其实就==p1.fada();<br>//这里写这p1是因为p1这个对象在调用这个函数。一句话，谁调用它就在代表谁。<br>}<br>private int age;<br>Person(int age)<br>{<br>       this.age =age;<br>}<br>public void fada()<br>       {<br>              System.out.println(“fada”);<br>}<br>/*<br>       需求：给人定义一个用于比较年龄是否相同的功能。也就是是否是同龄人。<br>       */<br>       public boolean compare(Person p)<br>       {<br>              return this.age==p.age;</p>
 <pre><code>}</code></pre><p>}</p>
 <p>class PersonDemo<br>{<br>       public static void main(String[] args)<br>       {</p>
 <pre><code>Person p1 = new Person(20);
@@ -214,12 +214,12 @@ Person p2 = new Person(25);</code></pre><p>//因为是两个人比，所以要�
 <p>（三） 多态<br>1，多态的体现<br>父类的引用指向了自己的子类对象。<br>父类的引用也可以接收自己的子类对象。<br>2，多态的前提<br>必须是类与类之间有关系。要么继承，要么实现。<br>通常还有一个前提：存在覆盖。</p>
 <p>3，多态的好处<br>多态的出现大大的提高程序的扩展性。</p>
 <p>4，多态的弊端：<br>提高了扩展性，但是只能使用父类的引用访问父类中的成员。</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>abstract classAnimal<br>{<br>       abstract void eat();<br>}<br>class Cat extendsAnimal<br>{<br>       public void eat()<br>//多态还有一个前提：存在覆盖。不然没有意义，只是继承了一个空方法。<br>       {<br>              System.out.println(“吃鱼”);<br>       }<br>public void catchMouse()<br>//但是只能使用父类的引用访问父类中的成员。因为父类中并没有catchMouse方法，所以多态无法实现catchMouse</p>
+<p>abstract classAnimal<br>{<br>       abstract void eat();<br>}<br>class Cat extendsAnimal<br>{<br>       public void eat()<br>//多态还有一个前提：存在覆盖。不然没有意义，只是继承了一个空方法。<br>       {<br>              System.out.println(“吃鱼”);<br>       }<br>public void catchMouse()<br>//但是只能使用父类的引用访问父类中的成员。因为父类中并没有catchMouse方法，所以多态无法实现catchMouse</p>
 <pre><code>{
        System.out.println(&quot;抓老鼠&quot;);
 }</code></pre><p>}<br>class Dog extendsAnimal<br>{<br>       public void eat()<br>       {<br>              System.out.println(“吃骨头”);<br>       }<br>}<br>public static voidfunction(Animal a)//Animal a = new Cat();父类的引用指向了自己的子类对象。父类的引用也可以接收自己的子类对象。<br>前题：必须是类与类之间有关系。要么继承，要么实现。Animal是动物，Cat是它的子类。<br>{<br>       a.eat();<br>}<br>class DuoTaiDemo<br>{<br>       public static void main(String[] args)<br>       {<br>              function(new Cat());<br>function(new Dog());//提高了扩展性，不用再去新建一个对象，再引用对象的功能。<br>       }<br>异常：<br>1.异常的处理</p>
 <p>java 提供了特有的固定语句进行处理。</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>try<br>{<br>       需要被检测的代码；<br>}<br>catch(异常类 变量)<br>{<br>       处理异常的代码；(处理方式)<br>}<br>finally//这句可以没有。<br>{<br>2.对捕获到的异常对象进行常见方法操作。</p>
+<p>try<br>{<br>       需要被检测的代码；<br>}<br>catch(异常类 变量)<br>{<br>       处理异常的代码；(处理方式)<br>}<br>finally//这句可以没有。<br>{<br>2.对捕获到的异常对象进行常见方法操作。</p>
 <p>​ StringgetMessage()：获取异常信息。</p>
 <p>在函数上声明异常。<br>便于提高安全性，让调用出进行处理。不处理编译失败<br>对多异常的处理。</p>
 <p>1，声明异常时，建议声明更为具体的异常。这样处理的可以更具体。<br>2，对方声明几个异常，就对应有几个catch块。不要定义多余的catch块。<br>如果多个catch块中的异常出现继承关系，父类异常catch块放在最下面。</p>
