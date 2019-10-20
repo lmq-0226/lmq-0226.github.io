@@ -1,0 +1,441 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			    <title>
+    Hexo
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    <meta name="keywords" content="miccall" />
+    
+    	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	 
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+    <style type="text/css">
+        body:before {
+          content: ' ';
+          position: fixed;
+          top: 0;
+          background: url('/img/bg.jpg') center 0 no-repeat;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover; 
+        }
+    </style>
+
+			    
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script async type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">MICCALL</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">主页</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">分类</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="简历">
+		                简历
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="团队">
+		                团队
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="图库">
+		                图库
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tag/" title="标签">
+		                标签
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+                    
+                    <li>
+                        <a title="github" href="https://github.com/lmq-0226" target="_blank" rel="noopener">
+                            <i class="icon fa fa-github"></i>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a title="500px" href="http://500px.com" target="_blank" rel="noopener">
+                            <i class="icon fa fa-500px"></i>
+                        </a>
+                    </li>
+                    
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url();background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >MySQL创建数据库</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <p><strong>MySQL**</strong>数据库增删改查<strong><strong>SQL</strong></strong>语句** </p>
+<p><strong>查看数据库</strong> </p>
+<p><strong>使用数据库</strong> </p>
+<p><strong>创建数据库</strong> </p>
+<p><strong>删除数据库</strong> </p>
+<p><strong>创建表</strong> </p>
+<p><strong>长度区别</strong> </p>
+<p>int类型带长度：不影响存取值，即使设定的值超出了长度的范畴，也能存，如果没有达到设定的长度， </p>
+<p>则使用空格自动填充到设定的长度 </p>
+<p>char类型：不可变字符，设定的长度就是规定当前字段能存的数据的最大长度，若超出长度，则会报 </p>
+<p>错，若没有达到长度，使用空格填充到设定的长度 </p>
+<p>varchar：可变字符，设定的长度同样是规定当前字段能存的数据的最大长度，若超出长度，则会报 </p>
+<p>错，若没有达到长度，不会使用空格填充，实际多长就是多长 </p>
+<p><strong>删除表</strong> </p>
+<p><strong>表约束</strong> </p>
+<p>1.非空约束 NOT NULL </p>
+<p>2.默认值约束 DEFAULT ‘男’ </p>
+<p>3.唯一约束 UNIQUE4.主键约束 PRIMARY KEY </p>
+<p>show databases; </p>
+<p>use 数据库名; </p>
+<p>CREATE DATABASE 数据库名; </p>
+<p>DROP DATABASE 数据库名; </p>
+<p>create table 表名( 列名1 类型(长度) [约束], 列名2 类型(长度) [约束], ……); </p>
+<p>DROP TABLE 表名;<strong>查看表结构</strong> </p>
+<p>DESC 表名 </p>
+<p><strong>修改表</strong> </p>
+<p><strong>修改列名</strong> </p>
+<p><strong>修改列类型</strong> </p>
+<p><strong>修改列类型</strong> </p>
+<p><strong>==============================**</strong>数据查询<strong><strong>-</strong></strong>单表<strong>**=================================</strong> </p>
+<p><strong>查询表中全部信息</strong> </p>
+<p><strong>查询表中指定列的信息</strong> </p>
+<p>语句的执行顺序：from—&gt;select </p>
+<p><strong>数据去重</strong> </p>
+<p><strong>拼接结果</strong> </p>
+<p><strong>运算符优先级：</strong> </p>
+<p>1.乘法和除法的优先级高于加法和减法 </p>
+<p>2.同级运算的顺序是从左到右 </p>
+<p>3.表达式中使用”括号”可强行改变优先级的运算顺序 </p>
+<p><strong>设置别名**</strong>(<strong><strong>注意：关键字</strong></strong>as<strong><strong>可以省略</strong></strong>)** </p>
+<p>语句的执行顺序：from—&gt;select </p>
+<p>Alter table 表名 change 列名 新列名 类型; </p>
+<p>Alter table 表名 change 列名 列名 新类型; </p>
+<p>Alter table 表名 modify 列名 新类型; </p>
+<p>select * from 表名; </p>
+<p>select 列1,列2 from 表名; </p>
+<p>select distinct 列…. From 表名; </p>
+<p>select concat(列1,列2) from 表名; </p>
+<p>select 列1[+-*/]列2 from 表名; </p>
+<p>select 列 as 别名 from 表名; </p>
+<p>select 列 别名 from 表名;<strong>条件查询</strong> </p>
+<p><strong>条件中比较运算符：**</strong>(** <strong>等于**</strong>:=** <strong>大于**</strong>:&gt;** <strong>大于等于**</strong>:&gt;=** <strong>小于**</strong>:&lt;** <strong>小于等于**</strong>:&lt;=** <strong>不等于**</strong>:!=** <strong>或</strong> <strong>&lt;&gt; )</strong> </p>
+<p>注意:字符串、日期需使用单引号括起来 </p>
+<p>语句的执行顺序：from—&gt;where—&gt;select </p>
+<p><strong>逻辑运算符**</strong>(** <strong>并且**</strong>:and** <strong>或</strong> <strong>&amp;&amp;</strong> <strong>或**</strong>:or** <strong>非**</strong>:not** <strong>或</strong> <strong>! )</strong> </p>
+<p><strong>范围查询</strong> </p>
+<p>//列在这个区间的值where 列 not between 条件1 and 条件2; </p>
+<p>//不在这个区间where !( 列 between 条件1 and 条件2 ); </p>
+<p>//同样表示不在这个区间 </p>
+<p><strong>集合查询**</strong>(** <strong>判断列的值是否在指定的集合中</strong> <strong>)</strong> </p>
+<p>//列中的数据是in后的值里面的where 列 not in(值1,值2); </p>
+<p>//不是in中指定值的数据 </p>
+<p><strong>NULL**</strong>值查询<strong>**(</strong> <strong>注意：列中值为**</strong>null<strong><strong>不能使用</strong></strong>=<strong>**去查询</strong> <strong>)</strong> </p>
+<p>//查询列中值为null的数据 </p>
+<p><strong>模糊查询</strong> </p>
+<p><strong>%**</strong>：表示<strong><strong>0</strong></strong>到多个字符，示例：** </p>
+<p> //表示以0结尾where 列 like ‘0%’; </p>
+<p>//表示以0开头where 列 like ‘%0%’; </p>
+<p> //表示数据中包含0 </p>
+<p><strong>_**</strong>：表示一个字符，可多次使用，示例：** </p>
+<p>select 列… from 表名 where 条件; </p>
+<p>where 列 比较运算符 值; </p>
+<p>where 条件1 逻辑运算符 条件2; </p>
+<p>where not 条件; </p>
+<p>where 列 between 条件1 and 条件2; </p>
+<p>where 列 in(值1,值2); </p>
+<p>where 列 is null; </p>
+<p>where 列 like ‘%0’; </p>
+<p>where 列 like ‘%0_’;//数据结尾第二位是0 </p>
+<p><strong>结果排序**</strong>(** <strong>对查询出的结果按照一列或多列进行升序还是降序排列 升序**</strong>:asc** <strong>降序**</strong>:desc** <strong>注意：不能使用</strong> </p>
+<p><strong>中文的别名排序**</strong>)** </p>
+<p>where 条件 order by 列 [asc/desc] </p>
+<p>语句的执行顺序：from—&gt;where—&gt;select—&gt;order by </p>
+<p><strong>分页查询**</strong>( beginIndex:<strong>**表示从第多少条数据开始</strong> <strong>pageSize:**</strong>表示每页显示的数据条数** <strong>)</strong> </p>
+<p>where [条件] limit beginIndex,pageSize; </p>
+<p>ex：每页显示3条数据 </p>
+<p>第一页: SELECT * FROM 表名 LIMIT 0,3 –0,1,2 </p>
+<p>第二页: SELECT * FROM 表名 LIMIT 3,3 –3,4,5 </p>
+<p>第三页: SELECT * FROM 表名 LIMIT 6,3 –6,7,8 </p>
+<p>第四页: SELECT * FROM 表名 LIMIT 9,3 –9,10,11  </p>
+<p> …… </p>
+<p>第七页: SELECT * FROM 表名 LIMIT 18,3 –18,19,20 </p>
+<p><strong>beginIndex**</strong>公式：<strong><strong>(</strong></strong>当前页数<strong>*<em>-1)\</em>pageSize</strong> </p>
+<p><strong>聚集函数**</strong>(** <strong>作用于一组数据，并对一组数据返回一个值</strong> <strong>)</strong> </p>
+<p><strong>COUNT:**</strong>统计结果记录数，若统计的是列，列中为<strong><strong>Null</strong></strong>，那么<strong><strong>count</strong></strong>将不会计算值** </p>
+<p><strong>MAX:</strong> <strong>统计计算最大值</strong> </p>
+<p><strong>MIN:</strong> <strong>统计计算最小值</strong> </p>
+<p><strong>SUM:</strong> <strong>统计计算求和</strong> </p>
+<p><strong>AVG:</strong> <strong>统计计算平均值</strong> </p>
+<p><strong>分组函数**</strong>(** <strong>注意：如果要对分组后的数据进行筛选，那么必须使用**</strong>having<strong><strong>关键字，条件写在</strong></strong>having<strong>**后</strong> <strong>)</strong> </p>
+<p>select 聚集函数 from 表名 where [条件] group by 列 having 分组后的条件 </p>
+<p>语句的执行顺序：FROM—&gt; WHERE—&gt;group by—-&gt;Having—&gt;SELECT–&gt;ORDER BY </p>
+<p><strong>Where**</strong>和<strong><strong>having</strong></strong>的区别：** </p>
+<p><strong>Where:</strong> <strong>先过滤已有的数据**</strong>(<strong><strong>数据是已经存在的</strong></strong>),<strong><strong>在进行分组</strong></strong>,<strong>**在聚集计算</strong> </p>
+<p><strong>Having:**</strong>先分组<strong><strong>,</strong></strong>在对每组进行计算<strong><strong>,</strong></strong>根据得到结果在过滤<strong><strong>(</strong></strong>分组把数据算出之后，在过滤<strong>**)</strong> </p>
+<p>注意：使用having的时候，它是可以使用别名的 </p>
+<p><strong>===============================**</strong>数据查询<strong><strong>-</strong></strong>多表<strong>**===============================</strong> </p>
+<p><strong>交叉连接**</strong>:<strong>**又名笛卡尔积，使用交叉连接会产生笛卡尔积</strong> </p>
+<p>假设集合A={a, b}，集合B={0, 1, 2}，则两个集合的笛卡尔积为{(a, 0), (a, 1), (a, 2), (b, 0), (b, 1), (b, 2)}。 </p>
+<p>select * from 表1,表2<strong>内连接：过滤为空的数据**</strong>(<strong><strong>查询的实际上是两张表数据的交集部分</strong></strong>)** <strong>目的</strong> <strong>==**</strong>》解决笛卡尔积现象，正确** </p>
+<p><strong>查询了需要的数据</strong> </p>
+<p>select * from 表1,表2 where 表1.字段=表2.字段; </p>
+<p>//隐式内连接,使用where条件消除笛卡尔积 </p>
+<p>select * from 表1 [inner] join 表2 on 表1.字段=表2.字段; </p>
+<p> //显式内连接,如果是多张表，则一直在join..on后依次添加join..on即可,inner关键字可被省略 </p>
+<p><strong>外连接：左外连接、右外连接、全外连接</strong> </p>
+<p><strong>左外连接**</strong>:<strong><strong>以左边表为主，返回左边表中所有数据，若右表中无数据，则显示为</strong></strong>NULL<strong>**，请参考实际查询</strong> </p>
+<p><strong>结果来理解</strong> </p>
+<p>select * from 表1 left [outer] join 表2 on 表1.字段=表2.字段; </p>
+<p>//表1为左表，表2为右表,outer关键字可被省略 </p>
+<p><strong>右外连接：以右边表为主，返回右表中所有数据，若左表中无数据，则显示为**</strong>NULL<strong>**，结合实际查询结</strong> </p>
+<p><strong>果来理解</strong> </p>
+<p>select * from 表1 right [outer] join 表2 on 表1.字段=表2.字段; </p>
+<p>//表1为左表，表2为右表,outer关键字可被省略 </p>
+<p><strong>全外连接：返回涉及的多表中的所有数据，**</strong>MYSQL<strong>**中不支持该查询，仅限了解自连接：单表当作多表</strong> </p>
+<p><strong>查询，直白的讲就是一张表中数据含有多种关系，使用多表查询的语法，来查询一张表，查询过程中一</strong> </p>
+<p><strong>定要使用别名</strong> </p>
+<p>多用在分类数据、省市县分类数据、权限… </p>
+<p>select 表1.字段1,表2.字段2 from 表名 as 表1,表名 as 表2 where 表1.字段1=表2.字段2 </p>
+<p><strong>子查询：将一个查询结果作为另一个查询的对象，直白的讲就是**</strong>SQL<strong>**语句嵌套</strong> </p>
+<p>select * from (select * from 表名) as 别名select * from where 条件 </p>
+<p>//条件中包含查询语句 </p>
+<p>注意：1.查询结果的虚拟表必须取别名 </p>
+<p> 2.字段与关键字一样，冲突时，需要给字段名加``,(Esc键下面、1的左边) </p>
+<p> 3.如果给虚拟结果表中的字段取了别名，则对虚拟结果表查询时，应该用 表别名.虚拟表字段别名 </p>
+<p><strong>===============================**</strong>插入数据<strong>**===============================</strong> </p>
+<p>insert into 表名(字段1,字段2..) values(值1,值2…); </p>
+<p>注意： 1.如果插入的表中的主键是自增类型的，可以不用插入值 </p>
+<p> 2.如果主键是非自增 ，插入的数据则是填补主键字段值空余的值 </p>
+<p> 3.如果主键设置了自动递增，会从主键字段最大值开始插入数据 </p>
+<p><strong>其他插入方式：</strong>insert into 表名(字段1,字段2) values(值1,值2),(值1,值2); </p>
+<p>//插入多条数据【MYSQL】insert into 表名 values(值1,值2); </p>
+<p>//针对全表所有字段进行插入操作insert into 表名(字段) select 字段 from 表2; </p>
+<p>//查询结果插入insert into 表名 select 字段 from 表2; </p>
+<p>//查询结果，全表插入 </p>
+<p><strong>===============================**</strong>修改数据<strong>**===============================</strong> </p>
+<p>update 表 set 字段=值 where 条件; </p>
+<p> //带条件修改指定数据，否则修改全表 </p>
+<p><strong>===============================**</strong>删除数据<strong>**===============================</strong> </p>
+<p>delete from 表 where 条件; </p>
+<p>//删除数据带条件指定数据，否则删除全表数据 </p>
+<p><strong>===============================**</strong>数据备份<strong>**===============================</strong> </p>
+<p><strong>在命令行窗口进行，若操作系统版本高，则使用管理员模式</strong> </p>
+<p>导出： </p>
+<p>mysqldump -u账户 -p密码 数据库名称&gt;脚本文件存储地 </p>
+<p>ex: mysqldump -uroot -proot jdbcdemo&gt; C:/shop_bak.sql </p>
+<p>导入： </p>
+<p>mysql -u账户 -p密码 数据库名称&lt; 脚本文件存储地址 </p>
+<p>ex: mysql -uroot -proot jdbcdemo&lt; C:/shop_bak.sql </p>
+<p>使用可视化导入导出： </p>
+<p>Navicat工具的导入和导出/Navicat工具的备份和还原 </p>
+<p><strong>===============================**</strong>数据索引<strong>**===============================</strong> </p>
+<p><strong>索引的作用相当于图书的目录，可以根据目录中的页码快速找到所需的内容。</strong> </p>
+<p><strong>什么列适合建索引？？</strong> </p>
+<p>1.表的主键、外键必须有索引； </p>
+<p>2.数据量超过30000的表应该有索引； </p>
+<p>3.经常与其他表进行连接的表，在连接字段上应该建立索引； </p>
+<p>4.经常出现在Where子句中的字段，特别是大表的字段，应该建立索引； </p>
+<p>5.索引应该建在选择性高的字段上； </p>
+<p>6.索引应该建在小字段上，对于大的文本字段甚至超长字段，不要建索引； </p>
+<p><strong>sql**</strong>语句创建和删除索引：** </p>
+<p>创建索引: </p>
+<p>CREATE INDEX 索引名称 ON 表名 (列名) </p>
+<p>删除索引: </p>
+<p>方式一：DROP INDEX 索引名 ON 表名 </p>
+<p>方式二: </p>
+<p>ALTER TABLE 表名 DROP INDEX 索引名</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/20/MySQL%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9%E5%91%BD%E4%BB%A4/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/20/MySQL%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9%E5%91%BD%E4%BB%A4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " target="_blank" rel="noopener" style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+                <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
