@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="author" content="���Ά�">
+  <meta name="keywords" content="">
+  <title>Eclipse环境下如何配置Tomcat，并且把项目部署到Tomcat服务器上 ~ Hexo</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+  
+
+
+
+</head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Hexo</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">Archives</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">Categories</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">Tags</a>
+          </li>
+        
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">About</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+</nav>
+
+    <div class="view intro-2" id="background"
+         style="background: url('/img/default.png')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              <p class="mt-3">Thursday, October 24th 2019, 5:54 pm</p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <h1 id="Eclipse环境下如何配置Tomcat"><a href="#Eclipse环境下如何配置Tomcat" class="headerlink" title="Eclipse环境下如何配置Tomcat"></a>Eclipse环境下如何配置Tomcat</h1><p>在本小节中，我将详细介绍在Eclipse环境中怎样集成Tomcat。现在Tomcat分了好多个版本，需要注意的是这里我只会用到Tomcat8，而Tomcat8又细分了好多个版本，记得2016年时我就用的是Tomcat8.0.36，按现在2019年2月28号的最新时间来算，Tomcat8已经升级到Tomcat8.5.38这个版本了，所以这两个版本的Tomcat我都会教大家一步一步集成到Eclipse中来。</p>
+<h2 id="Eclipse环境下配置Tomcat8-0-36"><a href="#Eclipse环境下配置Tomcat8-0-36" class="headerlink" title="Eclipse环境下配置Tomcat8.0.36"></a>Eclipse环境下配置Tomcat8.0.36</h2><ol>
+<li>打开Eclipse，单击“Window”菜单，选择下方的“Preferences”。 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat1.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="2">
+<li>单击“Server”选项，选择下方的“Runtime Environments”。 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat2.jpg" srcset="/img/loading.gif" alt=""></p>
+<p> 3.点击“Add”添加Tomcat。 </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat3.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="4">
+<li>点击“Next”，选中自己安装的Tomcat路径 .</li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat4.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="5">
+<li>点击“Finish”完成 .</li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat5.jpg" srcset="/img/loading.gif" alt=""></p>
+<h2 id="Eclipse环境下配置Tomcat8-5-38"><a href="#Eclipse环境下配置Tomcat8-5-38" class="headerlink" title="Eclipse环境下配置Tomcat8.5.38"></a>Eclipse环境下配置Tomcat8.5.38</h2><ol>
+<li>打开Eclipse，单击“Window”菜单，选择下方的“Preferences” .</li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat6.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>​    2.单击“Server”选项，选择下方的“Runtime Environments”。 </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat7.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="3">
+<li>点击“Add”添加Tomcat .</li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat8.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="4">
+<li>点击“Next”，选中自己安装的Tomcat路径。 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat9.jpg" srcset="/img/loading.gif" alt=""></p>
+<p> 从上图可以发现，在Eclipse集成Tomcat时，遇到了一个报错： </p>
+<p>​    <strong>The Apache Tomcat installation at this directory is version 8.5.38. A Tomcat 8.0 installation is expected</strong> </p>
+<p>这里我的Tomcat的版本是8.5.38，报这个错的原因是Eclipse里面限制Tomcat的最高版本是8.0的，我用的Tomcat的版本明显高于Eclipse的要求。具体的改法如下：<br>首先找到Tomcat的本地安装路径，然后找到lib文件夹中的catalina.jar包，用解压软件打开这个jar包，依次找到并且双击打开catalina.jar\org\apache\catalina\util\ServerInfo.properties文件，如下所示：<br><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat10.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>将文件中server.info=Apache Tomcat/8.5.38中的8.5.38改成8.0.0即可。<br>修改完成后重新配置Tomcat就不会报错了，如下图所示。 </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat11.jpg" srcset="/img/loading.gif" alt=""></p>
+<p> 5.点击“Finish”完成。 </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat12.jpg" srcset="/img/loading.gif" alt=""></p>
+<h1 id="建立一个Web应用"><a href="#建立一个Web应用" class="headerlink" title="建立一个Web应用"></a>建立一个Web应用</h1><ol>
+<li><code>File</code> → <code>New</code> → <code>Dynamic Web Project</code> </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat13.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="2">
+<li>创建一个<code>Dynamic Web Project</code> </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat14.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="3">
+<li>点击“Next”下一步 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat15.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="4">
+<li>点击“Next”下一步 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat16.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="5">
+<li>点击“Finish”完成 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat17.jpg" srcset="/img/loading.gif" alt=""></p>
+<h2 id="让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中"><a href="#让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中" class="headerlink" title="让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中"></a>让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中</h2><ol>
+<li><code>Window</code> → <code>Show View</code> → <code>Servers</code> </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat18.jpg" srcset="/img/loading.gif" alt=""></p>
+<ol start="2">
+<li>点击链接<code>No servers are available. Click ths link to create a new server.</code> ，在弹出的对话框中选择Tomcat版本 </li>
+</ol>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat19.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>3.点击“Next”，添加我们的项目 </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat20.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>选中项目并点击Add，或是双击都可以添加到右边</p>
+<p>4.点击“Finish”完成</p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat21.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>返回下方的“Servers”面板，右键单击该面板中的“Tomcat v8.0 Server at localhost”节点，在弹出的快捷菜单中单击“Start”，即可启动指定的Web服务器。如果此时直接启动访问<a href="http://localhost:8080/day05" target="_blank" rel="noopener">http://localhost:8080/day05</a> ，会发现会报404的错误。这是因为我们没有添加主页，下面添加主页(index.jsp)的内容：<br><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5C24.jpg" srcset="/img/loading.gif" alt=""></p>
+<p> <strong>注意：web资源一定要在WebRoot目录下添加</strong>。如图： </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat22.jpg" srcset="/img/loading.gif" alt=""></p>
+<p> 此时，再一次来访问该链接：<code>http://localhost:8080/day05</code> ，效果如下： </p>
+<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat23.jpg" srcset="/img/loading.gif" alt=""></p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            
+              <p>
+                <i class="iconfont icon-inbox"></i>
+                
+                  <a class="hover-with-bg" href="/categories/methods">methods</a>
+                  &nbsp;
+                
+              </p>
+            
+            <p>
+              <i class="iconfont icon-tag"></i>
+              
+                <a class="hover-with-bg" href="/tags/hexo">hexo</a>
+              
+              <span id="/2019/10/24/Eclipse环境下如何配置Tomcat，并且把项目部署到Tomcat服务器上/" class="visitors leancloud_visitors" data-flag-title="Eclipse环境下如何配置Tomcat，并且把项目部署到Tomcat服务器上">
+                <em id="visitors-text" class="post-meta-item-text"></em>
+                <i id="visitors-count"></i>
+              </span>
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;TOC</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "Eclipse环境下如何配置Tomcat，并且把项目部署到Tomcat服务器上&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $('#post').find('img').each(
+      function () {
+        var _this = $(this);
+        var _src = _this.attr("src");
+        _this.wrap('<a data-fancybox="images" href="' + _src + '" ></a>');
+      }
+    );
+  </script>
+
+
+
+
+</body>
+</html>
