@@ -133,84 +133,86 @@
       <div class="py-5 z-depth-3" id="board">
         <div class="post-content mx-auto" id="post">
           <div class="markdown-body">
-            <h1 id="Eclipse环境下如何配置Tomcat"><a href="#Eclipse环境下如何配置Tomcat" class="headerlink" title="Eclipse环境下如何配置Tomcat"></a>Eclipse环境下如何配置Tomcat</h1><p>在本小节中，我将详细介绍在Eclipse环境中怎样集成Tomcat。现在Tomcat分了好多个版本，需要注意的是这里我只会用到Tomcat8，而Tomcat8又细分了好多个版本，记得2016年时我就用的是Tomcat8.0.36，按现在2019年2月28号的最新时间来算，Tomcat8已经升级到Tomcat8.5.38这个版本了，所以这两个版本的Tomcat我都会教大家一步一步集成到Eclipse中来。</p>
+            <h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>Eclipse环境下如何配置Tomcat</p>
+<p>在本小节中，我将详细介绍在Eclipse环境中怎样集成Tomcat。<br>现在Tomcat分了好多个版本，需要注意的是这里我只会用到Tomcat8，而Tomcat8又细分了好多个版本，<br>记得2016年时我就用的是Tomcat8.0.36，按现在2019年2月28号的最新时间来算，Tomcat8已经升级到Tomcat8.5.38这个版本了，<br>所以这两个版本的Tomcat我都会教大家一步一步集成到Eclipse中来。</p>
 <h2 id="Eclipse环境下配置Tomcat8-0-36"><a href="#Eclipse环境下配置Tomcat8-0-36" class="headerlink" title="Eclipse环境下配置Tomcat8.0.36"></a>Eclipse环境下配置Tomcat8.0.36</h2><ol>
 <li>打开Eclipse，单击“Window”菜单，选择下方的“Preferences”。 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat1.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat1.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="2">
 <li>单击“Server”选项，选择下方的“Runtime Environments”。 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat2.jpg" srcset="/img/loading.gif" alt=""></p>
-<p> 3.点击“Add”添加Tomcat。 </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat3.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat2.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>3.点击“Add”添加Tomcat。 </p>
+<p><img src="/img/Tomcat3.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="4">
 <li>点击“Next”，选中自己安装的Tomcat路径 .</li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat4.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat4.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="5">
 <li>点击“Finish”完成 .</li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat5.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat5.jpg" srcset="/img/loading.gif" alt=""></p>
 <h2 id="Eclipse环境下配置Tomcat8-5-38"><a href="#Eclipse环境下配置Tomcat8-5-38" class="headerlink" title="Eclipse环境下配置Tomcat8.5.38"></a>Eclipse环境下配置Tomcat8.5.38</h2><ol>
 <li>打开Eclipse，单击“Window”菜单，选择下方的“Preferences” .</li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat6.jpg" srcset="/img/loading.gif" alt=""></p>
-<p>​    2.单击“Server”选项，选择下方的“Runtime Environments”。 </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat7.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat6.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>​<br>2.单击“Server”选项，选择下方的“Runtime Environments”。 </p>
+<p><img src="/img/Tomcat7.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="3">
 <li>点击“Add”添加Tomcat .</li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat8.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat8.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="4">
 <li>点击“Next”，选中自己安装的Tomcat路径。 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat9.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat9.jpg" srcset="/img/loading.gif" alt=""></p>
 <p> 从上图可以发现，在Eclipse集成Tomcat时，遇到了一个报错： </p>
 <p>​    <strong>The Apache Tomcat installation at this directory is version 8.5.38. A Tomcat 8.0 installation is expected</strong> </p>
-<p>这里我的Tomcat的版本是8.5.38，报这个错的原因是Eclipse里面限制Tomcat的最高版本是8.0的，我用的Tomcat的版本明显高于Eclipse的要求。具体的改法如下：<br>首先找到Tomcat的本地安装路径，然后找到lib文件夹中的catalina.jar包，用解压软件打开这个jar包，依次找到并且双击打开catalina.jar\org\apache\catalina\util\ServerInfo.properties文件，如下所示：<br><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat10.jpg" srcset="/img/loading.gif" alt=""></p>
-<p>将文件中server.info=Apache Tomcat/8.5.38中的8.5.38改成8.0.0即可。<br>修改完成后重新配置Tomcat就不会报错了，如下图所示。 </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat11.jpg" srcset="/img/loading.gif" alt=""></p>
-<p> 5.点击“Finish”完成。 </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat12.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>这里我的Tomcat的版本是8.5.38，报这个错的原因是Eclipse里面限制Tomcat的最高版本是8.0的，我用的Tomcat的版本明显高于Eclipse的要求。<br>具体的改法如下：<br>首先找到Tomcat的本地安装路径，然后找到lib文件夹中的catalina.jar包，用解压软件打开这个jar包，<br>依次找到并且双击打开catalina.jar\org\apache\catalina\util\ServerInfo.properties文件，如下所示：<br><img src="/img/Tomcat10.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>将文件中server.info=Apache Tomcat/8.5.38中的8.5.38改成8.0.0即可。</p>
+<p>修改完成后重新配置Tomcat就不会报错了，如下图所示。 </p>
+<p><img src="/img/Tomcat11.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>5.点击“Finish”完成。 </p>
+<p><img src="/img/Tomcat12.jpg" srcset="/img/loading.gif" alt=""></p>
 <h1 id="建立一个Web应用"><a href="#建立一个Web应用" class="headerlink" title="建立一个Web应用"></a>建立一个Web应用</h1><ol>
 <li><code>File</code> → <code>New</code> → <code>Dynamic Web Project</code> </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat13.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat13.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="2">
 <li>创建一个<code>Dynamic Web Project</code> </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat14.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat14.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="3">
 <li>点击“Next”下一步 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat15.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat15.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="4">
 <li>点击“Next”下一步 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat16.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat16.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="5">
 <li>点击“Finish”完成 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat17.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat17.jpg" srcset="/img/loading.gif" alt=""></p>
 <h2 id="让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中"><a href="#让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中" class="headerlink" title="让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中"></a>让Tomcat服务器显示在控制台上，将Web应用部署到Tomcat中</h2><ol>
 <li><code>Window</code> → <code>Show View</code> → <code>Servers</code> </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat18.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat18.jpg" srcset="/img/loading.gif" alt=""></p>
 <ol start="2">
 <li>点击链接<code>No servers are available. Click ths link to create a new server.</code> ，在弹出的对话框中选择Tomcat版本 </li>
 </ol>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat19.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat19.jpg" srcset="/img/loading.gif" alt=""></p>
 <p>3.点击“Next”，添加我们的项目 </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat20.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat20.jpg" srcset="/img/loading.gif" alt=""></p>
 <p>选中项目并点击Add，或是双击都可以添加到右边</p>
 <p>4.点击“Finish”完成</p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat21.jpg" srcset="/img/loading.gif" alt=""></p>
-<p>返回下方的“Servers”面板，右键单击该面板中的“Tomcat v8.0 Server at localhost”节点，在弹出的快捷菜单中单击“Start”，即可启动指定的Web服务器。如果此时直接启动访问<a href="http://localhost:8080/day05" target="_blank" rel="noopener">http://localhost:8080/day05</a> ，会发现会报404的错误。这是因为我们没有添加主页，下面添加主页(index.jsp)的内容：<br><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5C24.jpg" srcset="/img/loading.gif" alt=""></p>
-<p> <strong>注意：web资源一定要在WebRoot目录下添加</strong>。如图： </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat22.jpg" srcset="/img/loading.gif" alt=""></p>
-<p> 此时，再一次来访问该链接：<code>http://localhost:8080/day05</code> ，效果如下： </p>
-<p><img src="E:%5Cgithub%5CHexo%5Cblog%5Cpublic%5Cimg%5CTomcat23.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><img src="/img/Tomcat21.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>返回下方的“Servers”面板，右键单击该面板中的“Tomcat v8.0 Server at localhost”节点，<br>在弹出的快捷菜单中单击“Start”，即可启动指定的Web服务器。如果此时直接启动访问<a href="http://localhost:8080/day05" target="_blank" rel="noopener">http://localhost:8080/day05</a> ，会发现会报404的错误。<br>这是因为我们没有添加主页，下面添加主页(index.jsp)的内容：<br><img src="/img/24.jpg" srcset="/img/loading.gif" alt=""></p>
+<p><strong>注意：web资源一定要在WebRoot目录下添加</strong>。如图： </p>
+<p><img src="/img/Tomcat22.jpg" srcset="/img/loading.gif" alt=""></p>
+<p>此时，再一次来访问该链接：<code>http://localhost:8080/day05</code> ，效果如下： </p>
+<p><img src="/img/Tomcat23.jpg" srcset="/img/loading.gif" alt=""></p>
 
             <hr>
           </div>
